@@ -55,5 +55,7 @@ public class TesteCollectionsFramework {
 		//contains
 		System.out.println(contas.contains(cc1));
 		
+		
+		
 	}
 }

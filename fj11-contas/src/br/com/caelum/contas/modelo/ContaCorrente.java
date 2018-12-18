@@ -1,12 +1,13 @@
 package br.com.caelum.contas.modelo;
 
 import br.com.caelum.contas.testeErros.SaldoInsuficienteException;
+import java.lang.Comparable;
 
-public class ContaCorrente extends Conta implements Tributavel {
+public class ContaCorrente extends Conta implements Comparable<ContaCorrente> {
 
-//	public ContaCorrente() {
-//		// toString();
-//	}
+	// public ContaCorrente() {
+	// toString();
+	// }
 
 	public String getTipo() {
 		return " Corrente";
@@ -40,8 +41,19 @@ public class ContaCorrente extends Conta implements Tributavel {
 	// return null;
 	// }
 
-//	@Override
-//	public String toString() {
-//		return " Conta Corrente ";
-//	}
+	@Override
+	public int compareTo(ContaCorrente outro) {
+		if (this.saldo < outro.saldo) {
+			return -1;
+		}
+		if (this.saldo > outro.saldo) {
+			return 1;
+		}
+		return 0;
+	}
+
+	// @Override
+	// public String toString() {
+	// return " Conta Corrente ";
+	// }
 }

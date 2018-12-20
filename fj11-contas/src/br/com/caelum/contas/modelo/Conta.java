@@ -88,10 +88,11 @@ public abstract class Conta {
 		return dados;
 	}
 
-//	@Override
+	// @Override
 	public String toString() {
-//		return "Conta ";
-		return "[titular=" + nomeTitular + ", número=" + numeroConta + ", agencia=" + agencia + ", saldo $"+saldo+"]";
+		// return "Conta ";
+		return "[titular=" + nomeTitular + ", número=" + numeroConta + ", agencia=" + agencia + ", saldo $" + saldo
+				+ "]";
 	}
 	// public void recuperarDadosParaImpressao() {
 	// System.out.println("\nNome: \t\t\t" + getTitular() + "\nNúmero Conta: \t\t" +
@@ -121,11 +122,16 @@ public abstract class Conta {
 			return false;
 		}
 		outraConta = (Conta) object;
-//		return numeroConta == outraConta.getNumero() && agencia.equals(outraConta.getAgencia());
+		// return numeroConta == outraConta.getNumero() &&
+		// agencia.equals(outraConta.getAgencia());
 		// if (numeroConta == outraConta.numeroConta && equals(outraConta.agencia)) {
 		// return true;
 		// }
-		 return true;
+		return true;
+	}
+
+	public int compareTo(Conta outraConta) {
+		return this.nomeTitular.compareTo(outraConta.nomeTitular);
 	}
 
 }

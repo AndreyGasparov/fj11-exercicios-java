@@ -20,7 +20,7 @@ public class TesteEmpresa {
 		funcionarios.add(empregado2);
 		funcionarios.add(empregado3);
 
-//		Collections.sort(funcionarios, funcionarios.getNome());
+		// Collections.sort(funcionarios, funcionarios.getNome());
 
 		List<String> lista = new ArrayList<>();
 		lista.add("ricardo");
@@ -32,6 +32,17 @@ public class TesteEmpresa {
 		Collections.sort(lista);
 
 		System.out.println(lista);
+
+		Collections.max(lista);
+
+		System.out.println(Collections.max(lista));
+		System.out.println(Collections.min(lista));
+		
+		Collections.reverse(lista);
+		System.out.println(lista);
+		
+		
+		
 
 	}
 

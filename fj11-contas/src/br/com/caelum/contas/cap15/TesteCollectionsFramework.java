@@ -51,11 +51,9 @@ public class TesteCollectionsFramework {
 			ContaCorrente cc = (ContaCorrente) contas.get(i);
 			System.out.println(cc.getSaldo());
 		}
-		
-		//contains
+
+		// contains
 		System.out.println(contas.contains(cc1));
-		
-		
-		
+
 	}
 }
